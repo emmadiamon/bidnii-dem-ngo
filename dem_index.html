@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content = "Dem plus, dem+, Non-profit organization,"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coming Soon Page</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <section id="intro">
+        <header>
+            <div id="logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="We Encourage People Logo" width="200" class="logo"/>
+                </a>
+            </div>
+
+
+
+        </header>
+        
+
+
+        <div id="main" class="row">
+
+            <h1>Coming Soon</h1>
+            <p>Our website is currently under construction. We are working hard to improve our website. Stay tuned!</p>
+            <h5>Time Left Until Launching</h5>
+            
+
+        </div>
+
+        <p id="launch"></p>
+
+        <div id="lm-article">
+            <blockquote>
+        
+                <p>"Бидний Дэм-We Encourage People” бол хөгжлийн бэрхшээлтэй иргэдийн төлөө нэгдсэн залуусын сайн дурын байгууллага бөгөөд бид хөгжлийн бэрхшээлтэй хүүхдүүд, 
+                    иргэд болон тэдний гэр бүлд чиглэн төсөл хөтөлбөр хэрэгжүүлэлдэг.</p>
+    
+            </blockquote>
+            
+        </div>
+
+    
+    </section>  
+
+    <script>
+        var countDownDate = new Date("March 7, 2021 00:00:00").getTime();
+        var x= setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(distance % (1000* 60 * 60 *24)/ (1000*60*60));
+            var minutes = Math.floor(distance % (1000* 60 * 60)/ (1000*60));
+            var seconds = Math.floor(distance % (1000* 60)/ 1000);
+    
+            document.getElementById("launch").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            if (distance < 0 ){
+                clearInterval(x);
+                document.getElementById("launch").innerHTML = "DONE"
+    
+            }
+        }, 1000);
+    </script>
+    
+    <footer>&copy; Бидний Дэм-We Encourage People. All Rights Reserved.</footer>
+    
+
+    
+
+
+
+</body>
+
+
+
+</html>
